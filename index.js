@@ -16,7 +16,7 @@ app.get('/send-tweet', async (request, response) => {
     var handle = request.param('handle');
     try {
     var tweet = await sendTweet(message, handle);
-    return response.json(tweet);
+    return response.send("Message sent");
     } catch (err) {
     console.log(err);
     }
