@@ -1,42 +1,41 @@
 const express = require('express');
 const app = express();
-
-
+const dotenv = require("dotenv");
+dotenv.config();
+const EMAIL = process.env.TWITTER_EMAIL;
+const PASSWORD = process.env.TWITTER_PASSWORD;
 const Nightmare = require('nightmare');
 let nightmare = Nightmare({ show: true });
-//run npm start or nodemon (if you have nodemon installed globally)
-// to run the app locally
-//this sets the post at 3001 - go to localhost:3001 in your browser to see app
+
+app.get('/', (request, response) => {
+    response.send('Send Tweet');
+});
+
 app.set('port', process.env.PORT || 3001);
-app.locals.title = 'Twitter Hackery';
-// at localhost:3001/, you should see the text in this response
+app.locals.title = 'Twitter Messaging';
 
 app.get('/send-tweet', async (request, response) => {
     var message = request.param('message');
     var handle = request.param('handle');
     try {
     var tweet = await sendTweet(message, handle);
-    return response.send("Message sent");
+    return response.json({ message: 'Message sent' });
     } catch (err) {
     console.log(err);
     }
 });
 
 app.listen(app.get('port'), () => {
-
-    console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
+  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
 
-app.get('/', (request, response) => {
-    response.send('Tweeter Hackery');
-});
 function sendTweet(message, handle) {
     var url = `https://twitter.com/intent/tweet?text=${message}&via=${handle}`;
     return nightmare
     .goto(url)
     .wait(500)
-    .type('input[type="text"]', 'oversiteoversite@gmail.com')
-    .type('input[type="password"]', 'oversite123')
+    .type('input[type="text"]', `${EMAIL}`)
+    .type('input[type="password"]', `${PASSWORD}`)
     .type('input[type="password"]', '\u000d')
     .wait(4500)
     .evaluate(() => {
