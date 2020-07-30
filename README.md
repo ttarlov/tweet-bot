@@ -23,7 +23,7 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 
 ## Getting started
 
-Welcome to Nightmare scrape
+Welcome to Nightmare 
 ==========
 NightmareJS on Heroku 
 ==========
@@ -32,5 +32,11 @@ NightmareJS on Heroku
 - `Clone Repo`
 - $ `npm setup`
 - $ `node index.js`
+
+**Challenges:**
+The challenges of making this MicroService started with accessing Twitter authentication. The process needs a review that takes over two weeks, this made it impossible to use the Twitter API to post a tweet so our work around was using nightmare js to log-in and post the tweet for us.
+
+**Future Iterations**
+- Instead of using a nightmare we would use the Twitter API so improve the usability of the MicroService.
 
 
