@@ -19,7 +19,7 @@
 - `cd [new-project-name]`
 - `rm -rf .git`
 - `git init`
-- setup git remote repository on github.com from existing code
+- Setup git remote repository on github.com from existing code
 ```
 git remote add origin git@github.com:[username]/[new-project-name].git
 git add -A
@@ -28,7 +28,7 @@ git push -u origin master
 ```
 - `heroku create`
 - `heroku stack:set cedar-14`
-- set build packs
+- Set build packs
 ```
 heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt &&
 heroku buildpacks:add --index 2 https://github.com/captain401/heroku-buildpack-xvfb.git &&
@@ -36,9 +36,9 @@ heroku buildpacks:add --index 3 https://github.com/causztic/heroku-electron-buil
 heroku buildpacks:add --index 4 https://github.com/heroku/heroku-buildpack-nodejs.git
 ```
 - `git push heroku master`
-- goto heroku dashboard and select created app; install `Heroku Scheduler` add-on
+- Go to the Heroku dashboard and select `created app;` install the `Heroku Scheduler` add-on
 - `heroku ps:scale web=0`
-- `node ./index.js` to verify nightmare runs correctly locally; npm install needs to be run. The following output should be seen.
+- `node ./index.js` to verify nightmare runs correctly locally, `npm install` needs to be run. The following output should be seen:
 ```
 Welcome to Nightmare scrape
 ==========
@@ -46,8 +46,8 @@ NightmareJS on Heroku the ultimate scraping setup
 =========
 All done
 ```
-- Open heroku app from heroku dashboard. 'Application error' is displayed because no routes have been defined yet, so this is normal in this case. 
-- Run `heroku logs` to check output for any errors. If everything went well, near the bottom of the output the 'Welcome to Nightmare scrape' messages as displayed above should appear. Now, you can work on the rest of your code knowing that nightmarejs will work on heroku as it works locally.
+- Open the Heroku app from the Heroku dashboard. 'Application error' is displayed because no routes have been defined yet, so this is normal in this case. 
+- Run `heroku logs` to check the output for any errors. If everything went well, near the bottom of the output the 'Welcome to Nightmare scrape' messages as displayed above should appear. Now, you can work on the rest of your code knowing that nightmarejs will work on Heroku as it works locally.
 
 ### Debugging
 
