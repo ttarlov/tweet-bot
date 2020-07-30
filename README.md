@@ -25,20 +25,20 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 [Live Site](https://oversite-app.herokuapp.com/)
 
 ## Getting started
-- `Clone Repo`
+- Clone the repo
 - $ `npm setup`
 - $ `node index.js`
 
 **Challenges:**
-The challenges of making this MicroService started with accessing Twitter authentication. The process needs a review that takes over two weeks, this made it impossible to use the Twitter API to post a tweet so our work around was using nightmare js to log-in and post the tweet for us.
+The challenges we faced while adding this feature started with recieving authentication from Twitter. The process rewuires a review that takes over two weeks, which made it impossible to use the Twitter API to post a tweet in our time frame. We came up woth a work around by using Nightmarejs to log-in and post the tweet for us using a message we populate, and the Twitter handle of the government official we'd like to tweet. 
 
 **Future Iterations**
-- Instead of using a nightmare we would use the Twitter API so improve the usability of the MicroService.
+- Instead of using Nightmare we would use the Twitter API to improve the usability of the MicroService.
 
 
 ### API Endpoint
-- path: "/send-tweet"
-- params: handle and message
-- use: 'tags a user and post tweet to oversite account'
+- path: `/send-tweet`
+- params: `handle` and `message`
+- use: 'tags a user and posts tweet to oversite account'
 
 
