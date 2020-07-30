@@ -1,6 +1,9 @@
 # OverSite-Microservice
-
+<p align="center">
 <img width="405" alt="Screen Shot 2020-07-29 at 2 04 17 PM" src="https://user-images.githubusercontent.com/49219371/88853381-7e2de480-d1a4-11ea-8700-8d7cf59b8c26.png">
+
+  <img src="https://user-images.githubusercontent.com/1651212/27013967-6cbd6b8a-4ebc-11e7-9cd8-e5d0fcb01440.png" alt="logo" width="600px" />
+ </p>
 
 ## OverSite-Backend Github
 https://github.com/SMJ289/oversite-be
