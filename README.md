@@ -43,3 +43,9 @@ The challenges of making this MicroService started with accessing Twitter authen
 - Instead of using a nightmare we would use the Twitter API so improve the usability of the MicroService.
 
 
+### API Endpoint
+path: "/send-tweet"
+params: handle and message
+use: 'tags a user and post tweet to oversite account'
+
+
