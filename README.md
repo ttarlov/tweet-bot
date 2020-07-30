@@ -25,13 +25,6 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 [Live Site](https://oversite-app.herokuapp.com/)
 
 ## Getting started
-
-Welcome to Nightmare 
-==========
-NightmareJS on Heroku 
-==========
-
-## Setup
 - `Clone Repo`
 - $ `npm setup`
 - $ `node index.js`
