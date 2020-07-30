@@ -1,64 +1,36 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/1651212/27013967-6cbd6b8a-4ebc-11e7-9cd8-e5d0fcb01440.png" alt="logo" width="600px" />
- </p>
+# OverSite-Microservice
 
+<img width="405" alt="Screen Shot 2020-07-29 at 2 04 17 PM" src="https://user-images.githubusercontent.com/49219371/88853381-7e2de480-d1a4-11ea-8700-8d7cf59b8c26.png">
 
-# NightmareJS on Heroku <a href="https://heroku.com/deploy" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Heroku deploy" align="right"></a>
+## OverSite-Backend Github
+https://github.com/SMJ289/oversite-be
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/oscarmorrison/nightmare-heroku/issues)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](https://github.com/oscarmorrison/nightmare-heroku/blob/master/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/oscarmorrison/nightmare-heroku.svg)](https://github.com/oscarmorrison/nightmare-heroku/issues)
+## OverSite-Frontend Github
+https://github.com/emackinnon1/oversite-fe
 
+## Team Members:
 
-## Intro
+- [Steve Meyers GitHub](https://github.com/smj289)
+- [Raymond Nguyen GitHub](https://github.com/itemniner)
+- [Jenny Klich GitHub](https://github.com/jklich151)
+- [Elliot Mackinnon GitHub](https://github.com/emackinnon1)
+- [Taras Tarlov GitHub](https://github.com/ttarlov)
 
-[NightmareJS](http://www.nightmarejs.org/) is an awesome, highlevel webscraping and browser automation library built on top of electron. This repo is a good starting place to be able to use it with some default setups on top of heroku using the following instructions. [Read more](http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/)
+## Overview
+OverSite was our final cross pollination project at [Turing School of Software and Design](http://turing.io). The goal for this project was to build a full stack application from ideation to production in just 14 days. The emphasis was on creating a professional agile workflow with a combination of front-end and back-end developers.
+The core mission of OverSite is to amalgamate civic information into one easy to use application that allows the user to easily find Senator and Representative contact information, and Tweet at them directly through the app. Currently the user can search by state and access their local district level representatives throught their profile. 
+[Live Site](https://oversite-app.herokuapp.com/)
 
 ## Getting started
-- `git clone --depth 1 git@github.com:oscarmorrison/nightmare-heroku [new-project-name]`
 
-- `cd [new-project-name]`
-- `rm -rf .git`
-- `git init`
-- Setup git remote repository on github.com from existing code
-```
-git remote add origin git@github.com:[username]/[new-project-name].git
-git add -A
-git commit -m "Initial commit"
-git push -u origin master
-```
-- `heroku create`
-- `heroku stack:set cedar-14`
-- Set build packs
-```
-heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt &&
-heroku buildpacks:add --index 2 https://github.com/captain401/heroku-buildpack-xvfb.git &&
-heroku buildpacks:add --index 3 https://github.com/causztic/heroku-electron-buildpack.git &&
-heroku buildpacks:add --index 4 https://github.com/heroku/heroku-buildpack-nodejs.git
-```
-- `git push heroku master`
-- Go to the Heroku dashboard and select `created app;` install the `Heroku Scheduler` add-on
-- `heroku ps:scale web=0`
-- `node ./index.js` to verify nightmare runs correctly locally, `npm install` needs to be run. The following output should be seen:
-```
 Welcome to Nightmare scrape
 ==========
-NightmareJS on Heroku the ultimate scraping setup
-=========
-All done
-```
-- Open the Heroku app from the Heroku dashboard. 'Application error' is displayed because no routes have been defined yet, so this is normal in this case. 
-- Run `heroku logs` to check the output for any errors. If everything went well, near the bottom of the output the 'Welcome to Nightmare scrape' messages as displayed above should appear. Now, you can work on the rest of your code knowing that nightmarejs will work on Heroku as it works locally.
+NightmareJS on Heroku 
+==========
 
-### Debugging
+## Setup
+- `Clone Repo`
+- $ `npm setup`
+- $ `node index.js`
 
-```heroku run DEBUG=nightmare:*,electron:* xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" node --harmony index.js
-```
-### Other
-
-You may need to set engines in package.json:
-```
-"engines": {
-      "node": "8.11.4"
-  },
-```
 
