@@ -44,8 +44,8 @@ The challenges of making this MicroService started with accessing Twitter authen
 
 
 ### API Endpoint
-path: "/send-tweet"
-params: handle and message
-use: 'tags a user and post tweet to oversite account'
+- path: "/send-tweet"
+- params: handle and message
+- use: 'tags a user and post tweet to oversite account'
 
 
