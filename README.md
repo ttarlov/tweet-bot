@@ -11,7 +11,7 @@
 
 ## Intro
 
-[NightmareJS](http://www.nightmarejs.org/) is an awesome highlevel webscraping and browser automation library built ontop of electron. This repo is a good starting place to be able to use it with some default setups ontop of heroku using the following instructions. [Read more](http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/)
+[NightmareJS](http://www.nightmarejs.org/) is an awesome, highlevel webscraping and browser automation library built on top of electron. This repo is a good starting place to be able to use it with some default setups on top of heroku using the following instructions. [Read more](http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/)
 
 ## Getting started
 - `git clone --depth 1 git@github.com:oscarmorrison/nightmare-heroku [new-project-name]`
@@ -46,15 +46,16 @@ NightmareJS on Heroku the ultimate scraping setup
 =========
 All done
 ```
-- Open heroku app from heroku dashboard. 'Application error' is displayed because no routes have been defined yet so this is normal in this case. 
-- `heroku logs` to check output for any errors. If everything went well, near the bottom of the output the 'Welcome to Nightmare scrape' messages as displayed above should appear. Now, you can work on the rest of your code knowing that nightmarejs will work on heroku as it works locally.
+- Open heroku app from heroku dashboard. 'Application error' is displayed because no routes have been defined yet, so this is normal in this case. 
+- Run `heroku logs` to check output for any errors. If everything went well, near the bottom of the output the 'Welcome to Nightmare scrape' messages as displayed above should appear. Now, you can work on the rest of your code knowing that nightmarejs will work on heroku as it works locally.
 
 ### Debugging
+
 ```heroku run DEBUG=nightmare:*,electron:* xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" node --harmony index.js
 ```
 ### Other
 
-You may need to set a engines in package.json:
+You may need to set engines in package.json:
 ```
 "engines": {
       "node": "8.11.4"
