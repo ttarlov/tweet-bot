@@ -19,7 +19,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "electron": "^1.6.10",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nightmare": "^2.10.0"
   }
 }
